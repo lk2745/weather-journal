@@ -4,7 +4,6 @@ const projectData = {};
 // Require Express to run server and routes
 const express = require('express');
 
-
 // Start up an instance of app
 const app = express();
 
@@ -16,7 +15,6 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-
 // Cors for cross origin allowance
 const cors = require('cors');
 app.use(cors());
@@ -25,43 +23,36 @@ app.use(cors());
 app.use(express.static('website'));
 
 // Decalare the  server port
-const port = 3000
+const port = 3000;
 
 // Spin up the server
 const server = app.listen(port, listening);
 
-
 // Callback to debug
-function listening(){
-    console.log('Server is up and running on port:', port);
-};
-
+function listening() {
+  console.log("Server is up and running on port:", port);
+}
 
 // Initialize all route with a callback function
 app.get('/all', getData);
 
-
 // Callback function to complete GET '/all'  Item 2. in Development Strategy
 function getData(request, response) {
-    response.send(projectData);
-    console.log(projectData);
-};
-
+  response.send(projectData);
+  console.log(projectData);
+}
 
 // POST route Item 2. in Development Strategy
-app.post('/weather',addWeather);
+app.post('/weather', addWeather);
 
-
-function addWeather(request, response){
-    console.log('server side data:', request.body)
-    let weatherData = request.body;
-    let newEntry = {
-        temp: weatherData.temp,
-        date: weatherData.date,
-        response: weatherData.response
-    };
-    projectData.push(newEntry);
-    response.send(projectData);
-    console.log(projectData);
-};
-
+function addWeather(request, response) {
+  console.log("server side data:", request.body);
+  const newEntry = {
+    temp: request.body.temp,
+    date: request.body.date,
+    response: request.body.response,
+  }
+  projectData = newEntry;
+  console.log(projectData);
+  response.send(projectData);
+}
