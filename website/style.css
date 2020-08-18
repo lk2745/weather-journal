@@ -29,19 +29,42 @@ body{
 }
 
 #date{
-
+    color: black;
+    padding-left: 12px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
 }
 
 #temp{
-
+    color: black;
+    padding-left: 12px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
 }
 
 #content{
+    color: black;
+    padding-left: 12px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+}
 
+#city{
+    color: black;
+    padding-left: 12px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+}
+
+#humidity{
+    color: black;
+    padding-left: 12px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
 }
 
 .headline {
-
+    font-size: 64px;
 }
 .title{
 
@@ -65,15 +88,15 @@ input{
 }
 
 button{
-    width: 400px;
-    height: 100px;
+    width: 350px;
+    height: 75px;
     background: #3b4a6b;
     color: #f0d43a;
     font-size: 26px;
     font-family: 'Oswald', sans-serif;
     border: none;
     box-shadow: 2px 4px 5px #444;
-}
+   }
 h1{
     font-size: 36px;
 }

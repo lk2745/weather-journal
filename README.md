@@ -9,3 +9,19 @@ This will require modifying the `server.js` file and the `website/app.js` file. 
 ## Extras
 If you are interested in testing your code as you go, you can use `tests.js` as a template for writing and running some basic tests for your code.
 
+## Author
+Larry Keefer
+
+## Details
+Install Express - `npm install express`
+Install cors - `npm install cors`
+Install body-parser - `npm install body-parser`
+
+The `server.js` file requires express, cors, and body-parser.  
+
+The `app.js` sets variables for http://Openweather.org  credential and ApiKey
+
+`index.html` captures the user's Zip Code and User Response "feelings"
+
+Diplays the Date, City based on the Zip Code, Temperature, Humidity, and User's feelings
+
